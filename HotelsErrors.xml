@@ -1,7 +1,6 @@
-<<?xml version="1.0" encoding="utf-8"?>
-<Hotel> <!-- ❌ Error 1: Wrong root element name -->
-
-  <!-- Hotel with missing required _Rating attribute (Error 2) -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ERROR 1: Root element should be <Hotels>, not <Hotel> -->
+<Hotel>
   <Hotel>
     <Name>Westin</Name>
     <Phone>800-937-8461</Phone>
@@ -15,44 +14,54 @@
     </Address>
   </Hotel>
 
-  <!-- Hotel missing a Phone tag (Error 3) -->
-  <Hotel _Rating="4.5">
-    <Name>Kimpton Everly Hollywood</Name>
-    <Address>
-      <Number>1800</Number>
-      <Street>Argyle Ave</Street>
+  <Hotel>
+    <Name>Hotel Figueroa</Name>
+    <!-- ERROR 2: Missing required _Rating attribute -->
+    <Address _NearestAirport="LAX">
+      <Number>939</Number>
+      <Street>S Figueroa St</Street>
       <City>Los Angeles</City>
       <State>CA</State>
-      <Zip>90028</Zip>
+      <Zip>90015</Zip>
     </Address>
   </Hotel>
 
-  <!-- Hotel with no closing Address tag (Error 4) -->
   <Hotel _Rating="3.9">
-    <Name>Hampton Inn & Suites Burbank</Name>
-    <Phone>818-768-1106</Phone>
-    <Phone>855-516-1090</Phone>
-    <Address _NearestAirport="Hollywood Burbank Airport">
+    <Name>Hampton Inn &amp; Suites</Name>
+    <!-- ERROR 3: Missing <Phone> -->
+    <Address _NearestAirport="LAX">
       <Number>7501</Number>
       <Street>N Glenoaks Blvd</Street>
       <City>Burbank</City>
       <State>CA</State>
       <Zip>91504</Zip>
-    <!-- MISSING </Address> -->
-  </Hotel>
-
-  <!-- Hotel with duplicate <Name> tags (Error 5) -->
-  <Hotel _Rating="4.1">
-    <Name>Hotel June West LA</Name>
-    <Name>Duplicate Name Hotel</Name>
-    <Phone>310-645-0400</Phone>
-    <Address _NearestAirport="LAX">
-      <Number>8639</Number>
-      <Street>Lincoln Blvd</Street>
-      <City>Los Angeles</City>
-      <State>CA</State>
-      <Zip>90045</Zip>
     </Address>
   </Hotel>
 
+  <Hotel _Rating="4.5">
+    <!-- ERROR 5: Duplicate <Name> element -->
+    <Name>Duplicate 1</Name>
+    <Name>Duplicate 2</Name>
+    <Phone>310-546-4995</Phone>
+    <Phone>877-424-6423</Phone>
+    <Address _NearestAirport="LAX">
+      <Number>1221</Number>
+      <Street>N Valley Dr</Street>
+      <City>Manhattan Beach</City>
+      <State>CA</State>
+      <Zip>90266</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel _Rating="4.0">
+    <Name>Hotel Maya</Name>
+    <Phone>562-435-7676</Phone>
+    <!-- ERROR 4: Unclosed <Address> tag -->
+    <Address>
+      <Number>700</Number>
+      <Street>Queensway Dr</Street>
+      <City>Long Beach</City>
+      <State>CA</State>
+      <Zip>90802</Zip>
+</Hotel>
 </Hotel>
