@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Hotels>
-  <!-- From Figure 1 -->
   <Hotel _Rating="4.2">
     <Name>Westin</Name>
     <Phone>800-937-8461</Phone>
