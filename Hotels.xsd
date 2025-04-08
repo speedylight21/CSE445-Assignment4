@@ -1,17 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-  <!-- Root element -->
+  <!-- Root element Hotels contains multiple Hotel entries -->
   <xs:element name="Hotels">
     <xs:complexType>
       <xs:sequence>
-
-        <!-- Hotel element -->
+        
+        <!-- Each Hotel has: Name, Phone(s), and Address -->
         <xs:element name="Hotel" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" type="xs:string"/>
               <xs:element name="Phone" type="xs:string" maxOccurs="unbounded"/>
+              
+              <!-- Address is a nested complex type -->
               <xs:element name="Address">
                 <xs:complexType>
                   <xs:sequence>
@@ -21,10 +23,14 @@
                     <xs:element name="State" type="xs:string"/>
                     <xs:element name="Zip" type="xs:string"/>
                   </xs:sequence>
+                  
+                  <!-- Optional airport attribute -->
                   <xs:attribute name="_NearestAirport" type="xs:string" use="optional"/>
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
+
+            <!-- Optional rating attribute on Hotel -->
             <xs:attribute name="_Rating" type="xs:string" use="optional"/>
           </xs:complexType>
         </xs:element>
