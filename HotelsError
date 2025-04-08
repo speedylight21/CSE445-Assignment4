@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Hotel> <!-- ERROR 1: wrong root element name -->
+  <Hotel> <!-- Hotel #1 -->
+    <!-- ERROR 2: missing _Rating -->
+    <Name>Broken Inn</Name>
+    <!-- ERROR 3: missing Phone -->
+    <Address _NearestAirport="Sky Harbor">
+      <Number>99</Number>
+      <Street>E 7th St</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel _Rating="4.1">
+    <!-- ERROR 5: duplicate Name elements -->
+    <Name>Duplicate Hotel</Name>
+    <Name>Also Duplicate Hotel</Name>
+    <Phone>123-456-7890</Phone>
+    <Address _NearestAirport="Mesa Gateway">
+      <Number>150</Number>
+      <Street>E Broadway</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel _Rating="3.5">
+    <Name>Bad Address Hotel</Name>
+    <Phone>888-888-8888</Phone>
+    <!-- ERROR 4: missing closing tag for Address -->
+    <Address>
+      <Number>404</Number>
+      <Street>Nowhere Rd</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>00000</Zip>
+  </Hotel>
+</Hotel>
