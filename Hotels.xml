@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Hotels>
-  <!-- Example from Figure 1 -->
+  <!-- From Figure 1 -->
   <Hotel _Rating="4.2">
     <Name>Westin</Name>
     <Phone>800-937-8461</Phone>
@@ -39,7 +39,7 @@
   </Hotel>
 
   <Hotel _Rating="3.9">
-    <Name>Hampton Inn & Suites Burbank</Name>
+    <Name>Hampton Inn &amp; Suites Burbank</Name>
     <Phone>818-768-1106</Phone>
     <Phone>855-516-1090</Phone>
     <Address _NearestAirport="Hollywood Burbank Airport">
