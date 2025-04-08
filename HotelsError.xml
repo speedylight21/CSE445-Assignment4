@@ -1,41 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Hotel> <!-- ERROR 1: wrong root element name -->
-  <Hotel> <!-- Hotel #1 -->
-    <!-- ERROR 2: missing _Rating -->
-    <Name>Broken Inn</Name>
-    <!-- ERROR 3: missing Phone -->
-    <Address _NearestAirport="Sky Harbor">
-      <Number>99</Number>
+<<?xml version="1.0" encoding="utf-8"?>
+<Hotel> <!-- ❌ Error 1: Wrong root element name -->
+
+  <!-- Hotel with missing required _Rating attribute (Error 2) -->
+  <Hotel>
+    <Name>Westin</Name>
+    <Phone>800-937-8461</Phone>
+    <Phone>480-968-8885</Phone>
+    <Address _NearestAirport="LAX">
+      <Number>11</Number>
       <Street>E 7th St</Street>
-      <City>Tempe</City>
-      <State>AZ</State>
-      <Zip>85281</Zip>
+      <City>Los Angeles</City>
+      <State>CA</State>
+      <Zip>90017</Zip>
     </Address>
   </Hotel>
 
-  <Hotel _Rating="4.1">
-    <!-- ERROR 5: duplicate Name elements -->
-    <Name>Duplicate Hotel</Name>
-    <Name>Also Duplicate Hotel</Name>
-    <Phone>123-456-7890</Phone>
-    <Address _NearestAirport="Mesa Gateway">
-      <Number>150</Number>
-      <Street>E Broadway</Street>
-      <City>Tempe</City>
-      <State>AZ</State>
-      <Zip>85281</Zip>
-    </Address>
-  </Hotel>
-
-  <Hotel _Rating="3.5">
-    <Name>Bad Address Hotel</Name>
-    <Phone>888-888-8888</Phone>
-    <!-- ERROR 4: missing closing tag for Address -->
+  <!-- Hotel missing a Phone tag (Error 3) -->
+  <Hotel _Rating="4.5">
+    <Name>Kimpton Everly Hollywood</Name>
     <Address>
-      <Number>404</Number>
-      <Street>Nowhere Rd</Street>
-      <City>Tempe</City>
-      <State>AZ</State>
-      <Zip>00000</Zip>
+      <Number>1800</Number>
+      <Street>Argyle Ave</Street>
+      <City>Los Angeles</City>
+      <State>CA</State>
+      <Zip>90028</Zip>
+    </Address>
   </Hotel>
+
+  <!-- Hotel with no closing Address tag (Error 4) -->
+  <Hotel _Rating="3.9">
+    <Name>Hampton Inn & Suites Burbank</Name>
+    <Phone>818-768-1106</Phone>
+    <Phone>855-516-1090</Phone>
+    <Address _NearestAirport="Hollywood Burbank Airport">
+      <Number>7501</Number>
+      <Street>N Glenoaks Blvd</Street>
+      <City>Burbank</City>
+      <State>CA</State>
+      <Zip>91504</Zip>
+    <!-- MISSING </Address> -->
+  </Hotel>
+
+  <!-- Hotel with duplicate <Name> tags (Error 5) -->
+  <Hotel _Rating="4.1">
+    <Name>Hotel June West LA</Name>
+    <Name>Duplicate Name Hotel</Name>
+    <Phone>310-645-0400</Phone>
+    <Address _NearestAirport="LAX">
+      <Number>8639</Number>
+      <Street>Lincoln Blvd</Street>
+      <City>Los Angeles</City>
+      <State>CA</State>
+      <Zip>90045</Zip>
+    </Address>
+  </Hotel>
+
 </Hotel>
