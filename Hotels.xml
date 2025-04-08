@@ -25,7 +25,7 @@
     </Address>
   </Hotel>
 
-  <Hotel>
+  <Hotel _Rating="4.3">
     <Name>Kimpton Everly Hollywood</Name>
     <Phone>323-467-1790</Phone>
     <Address>
@@ -63,7 +63,7 @@
     </Address>
   </Hotel>
 
-  <Hotel>
+  <Hotel _Rating="4.0">
     <Name>Hotel Maya</Name>
     <Phone>562-435-7676</Phone>
     <Address>
@@ -75,7 +75,7 @@
     </Address>
   </Hotel>
 
-  <Hotel _Rating="4.0">
+  <Hotel _Rating="4.1">
     <Name>Fairmont Miramar Hotel</Name>
     <Phone>310-576-7777</Phone>
     <Address _NearestAirport="Santa Monica Airport">
@@ -87,7 +87,7 @@
     </Address>
   </Hotel>
 
-  <Hotel>
+  <Hotel _Rating="4.3">
     <Name>The LINE Hotel Koreatown</Name>
     <Phone>213-381-7411</Phone>
     <Address>
@@ -123,7 +123,7 @@
     </Address>
   </Hotel>
 
-  <Hotel>
+  <Hotel _Rating="4.0">
     <Name>La Quinta Inglewood</Name>
     <Phone>310-680-3333</Phone>
     <Address>
