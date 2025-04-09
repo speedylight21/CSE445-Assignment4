@@ -36,8 +36,6 @@
       <Zip>90266</Zip>
     </Address>
   </Hotel>
-</Hotels>     <!-- ✅ Final closing tag, no extra content after this -->
-
 
   <Hotel>
     <Name>Anaheim Marriott</Name>
