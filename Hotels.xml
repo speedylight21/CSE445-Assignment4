@@ -84,4 +84,41 @@
       <Zip>94108</Zip>
     </Address>
   </Hotel>
+
+      <Hotel _Rating="4.0">
+    <Name>Beachfront Inn Santa Cruz</Name>
+    <Phone>831-426-3324</Phone>
+    <Phone>800-555-1234</Phone>
+    <Address _NearestAirport="San Jose Intl">
+      <Number>1234</Number>
+      <Street>Beach St</Street>
+      <City>Santa Cruz</City>
+      <State>CA</State>
+      <Zip>95060</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel _Rating="4.7">
+    <Name>The Cliffs Hotel and Spa</Name>
+    <Phone>805-773-5000</Phone>
+    <Address>
+      <Number>2757</Number>
+      <Street>Shelter Cove Ln</Street>
+      <City>Pismo Beach</City>
+      <State>CA</State>
+      <Zip>93449</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel>
+    <Name>Hotel Shattuck Plaza</Name>
+    <Phone>510-845-7300</Phone>
+    <Address _NearestAirport="Oakland Intl">
+      <Number>2086</Number>
+      <Street>Allston Way</Street>
+      <City>Berkeley</City>
+      <State>CA</State>
+      <Zip>94704</Zip>
+    </Address>
+  </Hotel>
 </Hotels>
