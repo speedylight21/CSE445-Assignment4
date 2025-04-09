@@ -1,44 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Root element containing all hotel entries -->
-<Hotels>
-  <!-- Each Hotel entry includes a name, multiple phone numbers, and address info -->
-  <Hotel _Rating="4.2">
-    <Name>Westin</Name>
-    <Phone>800-937-8461</Phone>
-    <Phone>480-968-8885</Phone>
-    <Address _NearestAirport="LAX">
-      <Number>11</Number>
-      <Street>E 7th St</Street>
-      <City>Los Angeles</City>
-      <State>CA</State>
-      <Zip>90017</Zip>
-    </Address>
-  </Hotel>
-
-  <Hotel _Rating="4.6">
-    <Name>Hotel Figueroa</Name>
-    <Phone>213-627-8971</Phone>
-    <Address _NearestAirport="LAX">
-      <Number>939</Number>
-      <Street>S Figueroa St</Street>
-      <City>Los Angeles</City>
-      <State>CA</State>
-      <Zip>90015</Zip>
-    </Address>
-  </Hotel>
-
-  <Hotel _Rating="4.3">
-    <Name>Kimpton Everly Hollywood</Name>
-    <Phone>323-467-1790</Phone>
-    <Address>
-      <Number>1800</Number>
-      <Street>Argyle Ave</Street>
-      <City>Los Angeles</City>
-      <State>CA</State>
-      <Zip>90028</Zip>
-    </Address>
-  </Hotel>
-
   <Hotel _Rating="3.9">
     <Name>Hampton Inn &amp; Suites Burbank</Name>
     <Phone>818-768-1106</Phone>
@@ -52,7 +11,75 @@
     </Address>
   </Hotel>
 
-  <!-- More hotel listings follow the same structure -->
-  <!-- ... (entries omitted here for brevity, you already have them above) -->
+  <Hotel>
+    <Name>Hotel Maya</Name>
+    <Phone>562-435-7676</Phone>
+    <Address _NearestAirport="LAX">
+      <Number>700</Number>
+      <Street>Queensway Dr</Street>
+      <City>Long Beach</City>
+      <State>CA</State>
+      <Zip>90802</Zip>
+    </Address>
+  </Hotel>
 
-</Hotels>
+  <Hotel _Rating="4.5">
+    <Name>Shade Hotel Manhattan Beach</Name>
+    <Phone>310-546-4995</Phone>
+    <Phone>877-424-6423</Phone>
+    <Address _NearestAirport="LAX">
+      <Number>1221</Number>
+      <Street>N Valley Dr</Street>
+      <City>Manhattan Beach</City>
+      <State>CA</State>
+      <Zip>90266</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel>
+    <Name>Anaheim Marriott</Name>
+    <Phone>714-750-8000</Phone>
+    <Address>
+      <Number>700</Number>
+      <Street>W Convention Way</Street>
+      <City>Anaheim</City>
+      <State>CA</State>
+      <Zip>92802</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel _Rating="4.1">
+    <Name>Hotel del Coronado</Name>
+    <Phone>619-435-6611</Phone>
+    <Address _NearestAirport="San Diego Intl">
+      <Number>1500</Number>
+      <Street>Orange Ave</Street>
+      <City>Coronado</City>
+      <State>CA</State>
+      <Zip>92118</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel>
+    <Name>The LINE Hotel</Name>
+    <Phone>213-381-7411</Phone>
+    <Address>
+      <Number>3515</Number>
+      <Street>Wilshire Blvd</Street>
+      <City>Los Angeles</City>
+      <State>CA</State>
+      <Zip>90010</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel _Rating="3.8">
+    <Name>Fairmont San Francisco</Name>
+    <Phone>415-772-5000</Phone>
+    <Address _NearestAirport="SFO">
+      <Number>950</Number>
+      <Street>Mason St</Street>
+      <City>San Francisco</City>
+      <State>CA</State>
+      <Zip>94108</Zip>
+    </Address>
+  </Hotel>
