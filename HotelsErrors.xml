@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- ERROR 1: Root element should be <Hotels>, not <Hotel> -->
+<!-- ERROR 1: Root tag is 'Hotel' instead of 'Hotels' -->
 <Hotel>
-  <Hotel>
+  
+  <!-- Valid hotel structure (for comparison) -->
+  <Hotel _Rating="4.2">
     <Name>Westin</Name>
     <Phone>800-937-8461</Phone>
     <Phone>480-968-8885</Phone>
@@ -14,9 +16,10 @@
     </Address>
   </Hotel>
 
+  <!-- ERROR 2: Missing required attribute (_Rating) -->
   <Hotel>
     <Name>Hotel Figueroa</Name>
-    <!-- ERROR 2: Missing required _Rating attribute -->
+    <Phone>213-627-8971</Phone>
     <Address _NearestAirport="LAX">
       <Number>939</Number>
       <Street>S Figueroa St</Street>
@@ -26,10 +29,12 @@
     </Address>
   </Hotel>
 
+  <!-- ERROR 3: Missing one Phone number -->
   <Hotel _Rating="3.9">
-    <Name>Hampton Inn &amp; Suites</Name>
-    <!-- ERROR 3: Missing <Phone> -->
-    <Address _NearestAirport="LAX">
+    <Name>Hampton Inn &amp; Suites Burbank</Name>
+    <!-- Only one phone number present -->
+    <Phone>818-768-1106</Phone>
+    <Address _NearestAirport="Hollywood Burbank Airport">
       <Number>7501</Number>
       <Street>N Glenoaks Blvd</Street>
       <City>Burbank</City>
@@ -38,10 +43,10 @@
     </Address>
   </Hotel>
 
+  <!-- ERROR 5: Duplicate Name elements -->
   <Hotel _Rating="4.5">
-    <!-- ERROR 5: Duplicate <Name> element -->
-    <Name>Duplicate 1</Name>
-    <Name>Duplicate 2</Name>
+    <Name>Shade Hotel Manhattan Beach</Name>
+    <Name>Duplicate Name</Name>
     <Phone>310-546-4995</Phone>
     <Phone>877-424-6423</Phone>
     <Address _NearestAirport="LAX">
@@ -53,15 +58,17 @@
     </Address>
   </Hotel>
 
+  <!-- ERROR 4: Previously missing closing </Address> — NOW FIXED -->
   <Hotel _Rating="4.0">
     <Name>Hotel Maya</Name>
     <Phone>562-435-7676</Phone>
-    <!-- ERROR 4: Unclosed <Address> tag -->
     <Address>
       <Number>700</Number>
       <Street>Queensway Dr</Street>
       <City>Long Beach</City>
       <State>CA</State>
       <Zip>90802</Zip>
-</Hotel>
-</Hotel>
+    </Address> <!-- ✅ This closing tag was missing before -->
+  </Hotel>
+
+</Hotel> <!-- Root tag (should be 'Hotels') - Error 1 -->
